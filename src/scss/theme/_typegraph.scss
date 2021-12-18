@@ -1,0 +1,82 @@
+//familys
+$family-title: "'Bellefair'; sans-serif";
+$family-body: "'Barlow Condensed'; sans-serif";
+//weight
+$weigth-regular: 400;
+$weigth-bold: 700;
+.heading1 {
+  font-weight: $weigth-regular;
+  font-family: $family-title;
+  font-size: 150px;
+  color: $white;
+  line-height: 110%;
+}
+.heading2 {
+  font-weight: $weigth-regular;
+  font-family: $family-title;
+  font-size: 100px;
+  color: $white;
+  line-height: 115%;
+}
+.heading3 {
+  font-weight: $weigth-regular;
+  font-family: $family-title;
+  font-size: 56px;
+  color: $white;
+  line-height: 117%;
+}
+.heading4 {
+  font-weight: $weigth-regular;
+  font-family: $family-title;
+  font-size: 32px;
+  color: $white;
+  line-height: 115%;
+}
+.heading5 {
+  font-weight: $weigth-regular;
+  font-family: $family-body;
+  font-size: 28px;
+  color: $primary;
+  line-height: 130%;
+  letter-spacing: 4.75px;
+}
+.sub-heading1 {
+  font-weight: $weigth-regular;
+  font-family: $family-title;
+  font-size: 28px;
+  color: $white;
+  line-height: 110%;
+}
+.sub-heading2 {
+  font-weight: $weigth-regular;
+  font-family: $family-body;
+  font-size: 14px;
+  color: $white;
+  line-height: 120%;
+  letter-spacing: 2.36px;
+}
+.nav-text {
+  font-weight: $weigth-regular;
+  font-family: $family-body;
+  font-size: 16px;
+  color: $white;
+  line-height: 120%;
+  letter-spacing: 2.7px;
+  @media (min-width:$tablet) and (max-width:$desktop) {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
+}
+
+.body-text {
+  font-weight: $weigth-regular;
+  font-family: $family-body;
+  font-size: 18px;
+  color: $white;
+  line-height: 165%;
+}
+
+.accent-text {
+  font-family: $family-title;
+  font-weight: $weigth-bold;
+}

@@ -1,27 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <title>Frontend Mentor | Space tourism website</title>
+    <link rel="stylesheet" href="./public/css/home.css" />
+  </head>
+  <body>
+    <div class="body">
+      <header class="header">
+        <div class="header__left">
+          <img src="./public/images/shared/logo.svg" alt="" class="image" />
+        </div>
+        <div class="header__middle">
+          <ul class="menu">
+            <li class="item icon">
+              <img
+                class="icon-close"
+                src="./public/images/shared/icon-close.svg"
+                alt=""
+              />
+            </li>
+            <li class="item">
+              <a href="#" class="link nav-text active"
+                ><span class="accent-text"> 00</span> Home</a
+              >
+            </li>
+            <li class="item">
+              <a href="#" class="link nav-text"
+                ><span class="accent-text">01</span> Destination</a
+              >
+            </li>
+            <li class="item">
+              <a href="#" class="link nav-text"
+                ><span class="accent-text">02</span> Crew</a
+              >
+            </li>
+            <li class="item">
+              <a href="#" class="link nav-text"
+                ><span class="accent-text">03</span> Technology</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="header__rigth">
+          <div class="icon-menu">
+            <img
+              src="./public/images/shared/icon-hamburger.svg"
+              alt=""
+              class="image"
+            />
+          </div>
+        </div>
+      </header>
+      <div class="main-core">
+        <div class="main active-main">
+          <div class="main-home">
+            <div class="main-home__content">
+              <p class="sub-heading1 main-home__content__subtitle">
+                So, you want to travel to
+              </p>
+              <h1 class="heading1 main-home__content__title">Space</h1>
+              <p class="body-text main-home__content__p">
+                Let’s face it; if you want to go to space, you might as well
+                genuinely go to outer space and not hover kind of on the edge of
+                it. Well sit back, and relax because we’ll give you a truly out
+                of this world experience!
+              </p>
+            </div>
+            <div class="main-home__explore">
+              <div class="btn-home">
+                <span class="btn__text heading4">Explore</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="main-destinations">Destinations</div>
+        </div>
+        <div class="main">
+          <div class="main-crew">Crew</div>
+        </div>
+        <div class="main">
+          <div class="main-technologie">Techno</div>
+        </div>
+      </div>
+    </div>
 
-  So, you want to travel to
-  Space
-  Let’s face it; if you want to go to space, you might as well genuinely go to 
-  outer space and not hover kind of on the edge of it. Well sit back, and relax 
-  because we’ll give you a truly out of this world experience!
-
-  Explore
-
-</body>
+    <script src="./src/js/home.js"></script>
+  </body>
 </html>

@@ -1,0 +1,22 @@
+@mixin flex($ai:center,$jc:center,$gap:0,$fd:row) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+    gap: $gap;
+    flex-direction: $fd;
+}
+@mixin bg-nav {
+    background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+} 
+@mixin nav-item-active() {
+    content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: $white;
+      position: absolute;
+      bottom: -200%;
+      left: 0;
+}

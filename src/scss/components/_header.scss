@@ -1,0 +1,89 @@
+.header {
+  flex: 0 0 120px;
+  min-height: 96px;
+  padding: 2rem 0;
+  width: 100%;
+  padding-left: 3rem;
+  @include flex(center, space-between);
+  position: relative;
+  &__left {
+    flex: 0 0 48px;
+  }
+  &__middle {
+    flex-grow: 1;
+    @include flex(flex-end, flex-start, 3rem, column);
+  }
+  &__rigth {
+    flex: 0 0 32px;
+
+    display: none;
+  }
+  @media (max-width: $tablet) {
+    
+    &__rigth {
+      display: block;
+    }
+  }
+}
+.menu {
+  @include flex(center, flex-end, 2rem);
+  @include bg-nav();
+  padding: 0 8rem;
+  min-height: 96px;
+  & .item {
+    position: relative;
+  }
+  & .icon{
+    align-self: flex-end;
+  }
+  & .link {
+    text-transform: uppercase;
+    &::after {
+      @include nav-item-active();
+      opacity: 0;
+      mix-blend-mode: normal;
+      transition: opacity ease 1s;
+    }
+    &:hover::after {
+      opacity: 0.5;
+    }
+  }
+  & .link.active::after {
+    @include nav-item-active();
+    opacity: 1;
+  }
+  @media (max-width: $tablet) {
+    padding: 3rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -100%;
+    transition: right ease .7s;
+    height: 100vh;
+    width: 70%;
+    @include flex(flex-start, flex-start, 3rem, column);
+    
+    & .link::after {
+      height: 0;
+    }
+    & .link.active::after {
+      height: 0;
+    }
+    
+  }
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    padding: 0 2rem;
+  }
+}
+.show-nav {
+  right: 0;
+}
+.icon-close {
+  display: none;
+  padding: 3rem;
+
+  align-self: flex-end;
+  @media (max-width: $tablet) {
+    display: block;
+  }
+}

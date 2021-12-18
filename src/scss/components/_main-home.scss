@@ -1,0 +1,80 @@
+.main-home {
+  flex-grow:1 ;
+  @include flex(center,flex-start);
+  padding: 0 6rem;
+  column-gap: 6rem;
+  &__content {
+    flex: 1;
+    max-width: 450px;
+    @include flex(flex-start, center, 1.5rem, column);
+    &__subtitle {
+      text-align: left;
+    }
+    &__title {
+      text-align: left;
+    }
+    &__p {
+      text-align: left;
+    }
+  }
+  &__explore {
+    flex: 1;
+    @include flex(center,center);
+  }
+  @media (max-width: $desktop) {
+    
+    flex-direction: column;
+    row-gap: 6rem;
+    &__content {
+      
+      align-items: center;
+        &__subtitle {
+          text-align: center;
+        }
+        &__title {
+          text-align: center;
+        }
+        &__p {
+          text-align: center;
+        }
+      }
+    &__explore{
+      justify-content: center;
+    }  
+  }
+}
+.btn-home {
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  border: none;
+  @include flex();
+  position: relative;
+  cursor: pointer;
+  background-color: whitesmoke;
+  &::after {
+    content: "";
+    display: block;
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+    mix-blend-mode: normal;
+    border-radius: 50%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: translate(calc(-225px + 137px), calc(-225px + 137px));
+    transition: opacity ease 0.7s;
+  }
+  &:hover::after {
+    opacity: 0.1;
+  }
+}
+.btn__text {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: $family-body;
+  color: $dark;
+}
